@@ -15,7 +15,7 @@ Travel-App is an Android application built for users to explore all hotels, rest
 RecycleView, ToolBar, CardView, ListView, NestedScroll, DrawerLayout, Floating Action Button, Fragments etc.
 
 ## Developed By
-* Auther : Aman Pandey
+* Author : Aman Pandey
 * Email  : amanpandey12398@gmail.com
 
 Here are some screenshots of app
