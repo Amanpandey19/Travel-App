@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">BookingApp</string>
+    <string name="long_term_rental_of_villas_with_a_guarantee_of_conformity_with_photographs">Long-term rental of villas with a guarantee of conformity with photographs</string>
+    <string name="find_your_dream_villa_in_indonesia">Find your dream villa in Indonesia</string>
+    <string name="like_text">Like</string>
+    <string name="search_text">Search</string>
+    <string name="shop_text">Shop</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="you_are_here">You are here</string>
+    <string name="indonesia">Indonesia</string>
+    <string name="per_month">per month</string>
+    <string name="_920">$ 920</string>
+    <string name="villa_kemah_tinggi">Villa, Kemah Tinggi</string>
+    <string name="_4_93">4.93</string>
+    <string name="jl_kartika_plaza_38_1">Jl. Kartika Plaza, 38/1</string>
+    <string name="excellent_two_storey_villa_with_a_terrace_private_pool_and_parking_spaces_is_located_only_5_minutes_from_the_indian_ocean">Excellent two-storey villa with a terrace, private pool and parking spaces is located only 5 minutes from the Indian Ocean</string>
+    <string name="reservation">Reservation</string>
+    <string name="host">Host</string>
+    <string name="kanda_nok">Kanda Nok</string>
+    <string name="todo">TODO</string>
+    <string name="onveniences_at_home">Сonveniences at home</string>
+</resources>

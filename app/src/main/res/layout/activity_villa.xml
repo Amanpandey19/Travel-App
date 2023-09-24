@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9FB"
+    android:backgroundTint="#F9F9FB"
+    tools:context=".VillaActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:background="#F9F9FB"
+        android:backgroundTint="#F9F9FB"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="#F9F9FB"
+            android:layout_marginHorizontal="24dp"
+            android:backgroundTint="#F9F9FB"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="39dp"
+                android:layout_height="wrap_content"
+                >
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:layout_width="32dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/back"
+                    android:background="@android:color/transparent"
+                    android:layout_height="32dp"/>
+
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:layout_width="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/dialog"
+                    android:layout_marginEnd="5dp"
+                    android:background="@android:color/transparent"
+                    android:layout_height="32dp"/>
+
+            </RelativeLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:id="@+id/container_item">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/villa_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:background="@drawable/round_corner_white"
+                    android:backgroundTint="@color/white"
+                    android:clipToOutline="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:targetApi="s" />
+
+                <LinearLayout
+                    android:id="@+id/ll_dots"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="@id/villa_image"
+                    app:layout_constraintBottom_toBottomOf="@id/villa_image"
+                    app:layout_constraintRight_toRightOf="@id/villa_image" />
+
+                <TextView
+                    android:id="@+id/villa_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/villa_kemah_tinggi"
+                    android:textColor="#464646"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/manrope_extrabold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/villa_image" />
+
+                <TextView
+                    android:id="@+id/villa_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/jl_kartika_plaza_38_1"
+                    android:textColor="#A1A7B0"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/manrope_extrabold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/villa_name" />
+
+                <ImageView
+                    android:id="@+id/bed_image"
+                    android:layout_marginTop="13dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/villa_address" />
+
+                <TextView
+                    android:id="@+id/bed_text"
+                    android:layout_marginTop="13dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="2 Bed Rooms"
+                    android:textColor="#A1A7B0"
+                    app:layout_constraintStart_toEndOf="@id/bed_image"
+                    app:layout_constraintTop_toBottomOf="@+id/villa_address" />
+
+                <ImageView
+                    android:id="@+id/square_image"
+                    android:layout_marginTop="13dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/square"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintStart_toEndOf="@id/bed_text"
+                    app:layout_constraintTop_toBottomOf="@+id/villa_address" />
+
+                <TextView
+                    android:id="@+id/square_text"
+                    android:layout_marginTop="13dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="214 m"
+                    android:textColor="#A1A7B0"
+                    app:layout_constraintStart_toEndOf="@id/square_image"
+                    app:layout_constraintTop_toBottomOf="@+id/villa_address" />
+
+                <ImageView
+                    android:id="@+id/bath_image"
+                    android:layout_marginTop="13dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bath"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintStart_toEndOf="@id/square_text"
+                    app:layout_constraintTop_toBottomOf="@+id/villa_address" />
+
+                <TextView
+                    android:id="@+id/bath_text"
+                    android:layout_marginTop="13dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="3 Baths"
+                    android:textColor="#A1A7B0"
+                    app:layout_constraintStart_toEndOf="@id/bath_image"
+                    app:layout_constraintTop_toBottomOf="@+id/villa_address" />
+                <TextView
+                    android:id="@+id/villa_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/_920"
+                    android:textColor="@color/maintheme"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/manrope_extrabold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/villa_image" />
+
+
+                <TextView
+                    android:id="@+id/per_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/per_month"
+                    android:textColor="#A1A7B0"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/manrope_extrabold"
+                    app:layout_constraintStart_toStartOf="@id/villa_price"
+                    app:layout_constraintEnd_toEndOf="@id/villa_price"
+                    app:layout_constraintTop_toBottomOf="@+id/villa_price"
+                    tools:ignore="SmallSp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="@id/villa_image"
+                    app:layout_constraintTop_toTopOf="@id/villa_image"
+                    android:layout_margin="20dp"
+                    android:paddingHorizontal="9dp"
+                    android:paddingVertical="5dp"
+                    android:background="@drawable/round_corner"
+                    android:backgroundTint="#a1958b"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/star"
+                        app:tint="#FFD178" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="@string/_4_93"
+                        android:textSize="14sp"
+                        android:layout_marginStart="6dp"/>
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/heart"
+                    android:tint="@color/white"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_margin="20dp"
+                    app:tint="@color/white"
+                    tools:ignore="UseAppTint" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#A1A7B0"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#EAECEF"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/manrope_medium"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                android:text="@string/excellent_two_storey_villa_with_a_terrace_private_pool_and_parking_spaces_is_located_only_5_minutes_from_the_indian_ocean"
+                android:textColor="#464646"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:orientation="horizontal"
+                    tools:ignore="RelativeOverlap">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/user_image"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:srcCompat="@drawable/user2"
+                        app:strokeWidth="0dp"
+                        android:clickable="true"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                        android:focusable="true" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@android:color/transparent"
+                            android:background="@android:color/transparent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#A1A7B0"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/manrope_medium"
+                                android:text="@string/host"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="4dp"
+                                android:src="@drawable/medal"
+                                android:contentDescription="@string/todo" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/kanda_nok"
+                            android:textColor="#464646"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/manrope_semibold"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="4dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:src="@drawable/arrow"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#A1A7B0"
+                android:layout_marginTop="18dp"
+                android:backgroundTint="#EAECEF"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/onveniences_at_home"
+                android:layout_marginTop="16dp"
+                android:textSize="18sp"
+                android:textColor="#464646"
+                android:layout_marginBottom="2dp"
+                android:fontFamily="@font/manrope_semibold"/>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="18dp"
+                android:scrollbars="none"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free parking"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="6dp"
+                        android:textColor="#464646"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/round_corner_small_white"
+                        android:fontFamily="@font/manrope_medium"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TV set"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="6dp"
+                        android:textColor="#464646"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/round_corner_small_white"
+                        android:fontFamily="@font/manrope_medium"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Monitoring"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="6dp"
+                        android:textColor="#464646"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/round_corner_small_white"
+                        android:fontFamily="@font/manrope_medium"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Video monitoring"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="6dp"
+                        android:textColor="#464646"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/round_corner_small_white"
+                        android:fontFamily="@font/manrope_medium"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Air conditioning"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="6dp"
+                        android:textColor="#464646"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/round_corner_small_white"
+                        android:fontFamily="@font/manrope_medium"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
+            </HorizontalScrollView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/round_corner_white"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginVertical="12dp"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginTop="4dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/manrope_extrabold"
+                android:text="Total $ 2840"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#A1A7B0"
+                android:layout_marginTop="2dp"
+                android:textSize="10sp"
+                android:fontFamily="@font/manrope_extrabold"
+                android:text="for 2 months"/>
+
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/get_started_btn"
+            android:background="@drawable/get_started_btn_selector"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginVertical="12dp"
+            android:paddingHorizontal="20dp"
+            android:fontFamily="@font/manrope_extrabold"
+            android:textAllCaps="false"
+            android:text="@string/reservation"/>
+
+    </RelativeLayout>
+</RelativeLayout>
